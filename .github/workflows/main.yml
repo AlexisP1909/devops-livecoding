@@ -19,7 +19,7 @@ jobs:
       - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
-          distribution: 'temurin'  # Specify the Java distribution
+          distribution: 'coretto'  # Specify the Java distribution
           java-version: '17'
 
      #finally build your app with the latest command
