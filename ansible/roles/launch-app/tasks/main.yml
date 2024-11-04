@@ -3,6 +3,7 @@
   docker_container:
     name: my-api
     image: alexisp1909/tp-devops-simple-api  # Replace with your actual app image
+    pull: always
     state: started
     restart_policy: unless-stopped
     networks:

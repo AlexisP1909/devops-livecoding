@@ -5,6 +5,7 @@
   docker_container:
     name: my-db
     image: alexisp1909/tp-devops-database
+    pull: always
     networks:
       - name: my_network    
     env:
