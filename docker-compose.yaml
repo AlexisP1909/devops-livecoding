@@ -4,6 +4,8 @@ services:
   backend:
     build: ./simple-api
     container_name: my-api
+    ports:
+      - "8080:8080"
     networks:
       - my-network
     depends_on:
@@ -12,6 +14,8 @@ services:
   database:
     build: ./database
     container_name: my-db
+    ports:
+      - "5432:5432"
     networks:
       - my-network
     volumes:
@@ -25,6 +29,12 @@ services:
       - my-network
     depends_on:
       - backend
+  frontend:
+    build: ./devops-front
+    ports:
+      - "90:90"
+    networks:
+      - my-network
 
 volumes:
   db-volume:
