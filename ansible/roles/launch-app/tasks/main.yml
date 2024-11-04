@@ -4,6 +4,11 @@
     name: my-api
     image: alexisp1909/tp-devops-simple-api 
     pull: true
+    ports:
+      - "8080:8080"
+    env:
+      DATABASE_HOST: my-db
+      DATABASE_PORT: "5432"
     state: started
     restart_policy: unless-stopped
     networks:
