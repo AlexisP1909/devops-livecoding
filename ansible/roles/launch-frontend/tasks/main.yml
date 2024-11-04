@@ -3,7 +3,7 @@
   docker_container:
     name: my-front
     image: alexisp1909/tp-devops-front  # Replace with your actual app image
-    pull: true
+    pull: yes
     state: started
     restart_policy: unless-stopped
     ports: "90:90"

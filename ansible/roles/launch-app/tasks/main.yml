@@ -3,7 +3,7 @@
   docker_container:
     name: my-api
     image: alexisp1909/tp-devops-simple-api 
-    pull: true
+    pull: yes
     ports:
       - "8080:8080"
     state: started
