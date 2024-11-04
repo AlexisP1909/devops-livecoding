@@ -3,11 +3,11 @@
   become: true
 
   roles:
+    - destroy-containers
     - docker
     - create-network
     - launch-database
     - launch-app
     - launch-proxy
     - launch-frontend
-    - destroy-containers
 
