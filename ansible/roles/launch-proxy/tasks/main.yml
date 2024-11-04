@@ -7,5 +7,5 @@
     pull: true
     networks: 
       - name: my_network
-    published_ports:
-      - "81:80"
+    ports:
+      - "80:80"

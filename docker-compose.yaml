@@ -22,19 +22,21 @@ services:
       - db-volume:/var/lib/postgresql/data
 
   httpd:
+    container_name: my-httpd
     build: ./http-server
     ports:
       - "80:80"
     networks:
       - my-network
     depends_on:
-      
       - backend
   frontend:
     container_name: my-front
     build: ./devops-front
     ports:
       - "90:90"
+    depends_on:
+      - backend
     networks:
       - my-network
 
