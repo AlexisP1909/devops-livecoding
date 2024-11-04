@@ -24,12 +24,14 @@ services:
   httpd:
     build: ./http-server
     ports:
-      - "81:80"
+      - "80:80"
     networks:
       - my-network
     depends_on:
+      
       - backend
   frontend:
+    container_name: my-front
     build: ./devops-front
     ports:
       - "90:90"
