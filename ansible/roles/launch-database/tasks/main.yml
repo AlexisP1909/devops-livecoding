@@ -1,0 +1,15 @@
+---
+# tasks file for launch-database
+
+- name: Launch PostgreSQL database container
+  docker_container:
+    name: my-db
+    image: alexisp1909/tp-devops-database
+    networks:
+      - name: my_network    
+    env:
+      POSTGRES_DB: db 
+      POSTGRES_USER: user 
+      POSTGRES_PASSWORD: pwd
+    state: started  # Ensure the container is started
+    restart_policy: unless-stopped  # Optional, but good practice

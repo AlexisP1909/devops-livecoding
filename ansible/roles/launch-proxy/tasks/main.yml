@@ -1,0 +1,10 @@
+---
+# tasks file for launch-proxy
+- name: launch proxy
+  community.docker.docker_container:
+    name: http-server
+    image: alexisp1909/tp-devops-http-server
+    networks: 
+      - name: my_network
+    published_ports:
+      - "8080:80"
