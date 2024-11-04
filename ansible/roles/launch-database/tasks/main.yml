@@ -6,6 +6,8 @@
     name: my-db
     image: alexisp1909/tp-devops-database
     pull: true
+    published_ports:
+      - "5432:5432"
     networks:
       - name: my_network    
     env:
