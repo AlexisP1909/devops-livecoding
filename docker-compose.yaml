@@ -24,7 +24,7 @@ services:
   httpd:
     build: ./http-server
     ports:
-      - "80:80"
+      - "81:80"
     networks:
       - my-network
     depends_on:
