@@ -4,7 +4,7 @@
   community.docker.docker_container:
     name: http-server
     image: alexisp1909/tp-devops-http-server
-    pull: always
+    pull: true
     networks: 
       - name: my_network
     published_ports:
