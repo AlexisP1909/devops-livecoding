@@ -1,7 +1,7 @@
 ---
 - name: Launch application container
   docker_container:
-    name: my-api
+    name: my-front
     image: alexisp1909/tp-devops-front  # Replace with your actual app image
     pull: always
     state: started
